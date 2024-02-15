@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 >點擊按鈕透過抓id改變 p 標籤內的文字</h2>
+    
+    <button onclick="show()">顯示資訊</button>
+    <p id="Show"></p>
+    <script>
+        function show(){
+            /*let text=document.getElementById('Show')
+            text.innerHTML='<h2>我是資訊</h2>'*/
+            document.getElementById('Show').innerHTML='<h2 style="color: brown;">我是資訊</h2>'
+            console.log("按鈕正常")
+        }
+    </Script>
+</body>
+</html>
