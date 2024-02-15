@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML D0M</title>
+    <style>
+        /*
+        .text{
+            text-decoration: underline;
+        }
+        .btn{
+            background-color: #888888;
+            border-radius:155px;
+            padding: 15px;
+        }*/
+    </style>
+</head>
+<body>
+    <!--
+    取得標籤物件:透過標籤的ID屬性建立連結   
+    <div id="content">我是一段文字</div>
+    <span id="keyword">我是一段文字</span><br>
+    <button onclick="change();">我是按鈕1</button>
+    <button onclick="change2();">我是按鈕2</button>
+    <script>
+        function change(){
+            let con=document.querySelector("#content");
+            console.log(con);
+            con.innerHTML="對特定標籤操作,我是change()";
+            con.className="text";
+        }
+        console.log(document.body)
+        function change2(){
+            let con=document.querySelector("#keyword");
+            con.innerHTML="我是change2"
+            con.style.fontSize="100px";
+            con.style.color="red"
+        }
+    </script>
+    -->
+    <!--onclick選擇器
+    <span onclick="showabout()">關於我</span>
+    <span onclick="showexp()">學經歷</span>
+    <div id="showabout">我是駱靖安</div>
+    <div id="showexp" style="display: none;">目前學習前端知識</div>
+    <script>
+        function showabout(){
+            let ab=document.querySelector("#showabout")
+            let ex=document.querySelector("#showexp")
+            ab.style.display="block"
+            ex.style.display="none"
+            console.log("showabout")
+        }
+        function showexp(){
+            let ex=document.querySelector("#showexp")
+            let ab=document.querySelector("#showabout")
+            ex.style.display="block"
+            ab.style.display="none"
+            console.log("showexp")
+        }
+    </script>-->
+
+    <!--
+    //事件處理
+    //以下常見的事件種類
+    //click     滑鼠點擊
+    //mouseover 滑鼠移入
+    //mouseout  滑鼠移出
+    //mousedown 滑鼠按下
+    //mouseup   滑鼠放開
+
+    //基本語法
+    <div 事件名稱="程式碼">標籤內文</div>-->
+    
+
+    <!--
+    <button
+        onclick="console.log('滑鼠點擊')"
+        onmouseover="console.log('滑鼠移入')"
+        onmouseout="console.log('滑鼠移出')"
+        onmousedown="console.log('滑鼠按住')"
+    >滑鼠事件</button>
+
+    <div id="cl">標籤內文</div>
+    <button onclick="Click();">button</button>
+    <script>
+        function Click(){
+            console.log("click");
+            let clcl=document.querySelector("#cl");
+            clcl.innerHTML="我被點到了"
+        }
+    </script>
+    -->
+    <!--
+    <h3>事件處理練習</h3>
+    <span 
+        class="btn"
+        onmouseover="over(this);"
+        onmouseout="out(this);"
+        onmousedown="down(this);"
+        onmouseup="up(this);"
+        >點我</span>
+    <script>
+        
+        function over(elem){
+            elem.style.padding="20px"
+            elem.style.backgroundColor="#888888";   
+            console.log("over");
+        }
+        function out(elem){
+            elem.style.padding="15px"
+            elem.style.backgroundColor="#888888";
+            console.log("out");
+        }
+        function down(elem){
+            elem.style.backgroundColor="#555555"
+            console.log("down");
+        }
+        function up(elem){
+            elem.style.backgroundColor="#888888"
+            console.log("up");
+        }
+    </script>
+    -->
+    <p id="title">前端練習</p>
+    <button id="btn">我是按鈕</button>
+    <script>
+        window.addEventListener('load',function(){
+            const p1=document.getElementById('title')
+            console.log(p1)
+            p1.innerText='改變後前端'//innerText改變文字
+            const butt=document.getElementById('btn')
+            butt.inner='按鈕是我'
+        })
+        
+    </script>
+
+</body>
+</html>
