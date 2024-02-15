@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <script>
+        document.write("Hi,this is my first Javascript practice.");
+        
+
+
+
+        "-----以下為筆記區------"
+        //-----資料-----
+        //一.數字
+        12;
+        3.145788;
+        0;
+
+        //二.字串:任意的文字("",'')
+        "你好";
+        "hello";
+        '你好';
+        'heleoo';
+
+        //三.布林值
+        true;
+        false;
+
+        //四.空值
+        undefined; //真的是空的
+        null;      //裡面有東西，那個東西叫做空的
+
+        //五.在 console 中印出資料 console.log(資料)
+        console.log("This is my first Javascript practice.");
+        console.log(45);
+
+
+        //-----變數-----
+        //甚麼是變數?:可存放資料，可命名的空間
+        //變數的運作流程:1.宣告變數
+        //              2.使用變數
+        //宣告變數的語法
+        //let 變數名稱
+        //範例如下:
+        let x;
+        let name;
+        //使用變數--為何可以在 console.log() 裡面放變數，console.log()可以放資料，當我宣告變數name，name就成為了一個資料。
+        console.log(x);
+        console.log(name);
+
+        //指定變數
+        //let 變數名稱=資料 or 宣告過的變數名稱=資料
+        //範例如下
+        let X=5;  console.log(X);
+        X=100;    console.log(X);
+        let Name="我是Name";
+        console.log(Name);
+
+        //-----常數 Constant :不能夠更動資料的變數，稱為常數-----
+        //宣告常數語法
+        //const 常數名稱=資料
+        //範例如下
+        const y=50;
+        //y=100; //這裡會出現錯誤,因為宣告constant後不能改變裡面的資料
+        
+
+        //-----算術運算-----基本的加減乘除
+        //+-*/% 
+        //-----指定運算-----將資料存放進變數中
+        // =
+        // +=
+        // -=
+        // *=
+        // /=
+        // %=
+        //-----比較運算----- 比較資料的大小，得到布林值
+        // >  大於 
+        // <  小於 
+        // >= 大於等於
+        // <= 小於等於
+        // == 是否相等
+        //-----單元運算-----針對一個資料的運算
+        // ++ 變數資料加一
+        // -- 變數資料減一
+        // !  布林值反運算
+
+        //prompt(字串,字串) 這個指令會[回傳]輸入
+        //範例如下
+        /*
+        let number1=prompt("請輸入一個數字",""); // number1 會等於""內的資料
+        let number2=prompt("再輸入一個數字","");
+        let final_number= number1*number2;
+        console.log(final_number);*/
+
+        //-----流程控制-----
+        //判斷式  迴圈
+        // if判斷式-01
+        //  if(布林值){
+        //      如果布林值為true則執行這個程式區塊
+        //  }
+
+        // if判斷式-02
+        //  if(布林值){
+        //      如果布林值為true則執行這個程式區塊
+        //  }else{
+        //      如果布林值為false則執行這個程式區塊
+        //  }
+
+        // if判斷式-03
+        //  if(布林值){
+        //      如果布林值為true則執行這個程式區塊
+        //  }
+        //  else if(布林值){
+        //      如果對應布林值為true則執行這個程式區塊
+        //  }else if(布林值){
+        //      如果對應布林值為true則執行這個程式區塊
+        //  }else if(布林值){
+        //      如果對應布林值為true則執行這個程式區塊
+        //  }else{
+        //      如果上面布林值都為false則執行這個程式區塊
+        //  }
+        //範例如下
+        /*
+        let money=prompt("你要領多少錢","");
+        if(money<500){
+            console.log(money,"也太少了");
+        }else if(money>=1000){
+            console.log("你可真有錢");
+        }else{
+            console.log("ok");
+        }*/
+        
+        for(let N=1;N<10;N++){
+            console.log(N);
+        }
+        //-----函式運用------
+        //第一種建立方式
+        //建立函式:function 函式名稱(參數名稱列表){函式內部程式}
+        function test(){
+            console.log("I m function.")
+        }
+        //呼叫函式:資料名稱();
+        test();
+        //第二種建立方式
+        //建立函式:let 函式名稱(參數名稱列表){函示內部程式}
+        let test2=function(){
+            console.log("I m function2")
+        }
+        test2();
+        //函式運用2
+        function test3(I_m_message){
+            console.log(I_m_message);
+        }
+        test3("Hello!");
+        test3(50);
+
+        //函式運用3
+        function NumberAdd(number01,number02){
+            console.log(number01+=number02);
+        }
+        NumberAdd(50,102); 
+        //函式回傳值
+        //用法1:let 函式名稱(參數名稱列表){函示內部程式 return}:帶出回傳值 undifined
+        //用法2:let 函式名稱(參數名稱列表){函示內部程式 return(回傳值)}:帶出回傳值 
+        //範例如下  
+        function Return(){
+            console.log("我是回傳值");
+            return "hello";
+        }
+        let testReturn=Return();
+        console.log(testReturn);
+        //return回傳值是甚麼 函式本身就代表甚麼
+        //反之
+        function Return_1(){
+            console.log("我是第二回傳值");
+            return;
+        }
+        let testReturn_1=Return_1();
+        console.log(testReturn_1);
+        //因為return後沒有回傳值所以帶出的值為undefined
+        //return練習
+        function Retrun_Add_Practice_1(R1,R2){
+            console.log(R1+R2);
+            return "I m return"
+        }
+        Retrun_Add_Practice_1(5,6);
+        console.log(Retrun_Add_Practice_1());
+
+        //練習2
+        function Retrun_Add_Practice_2(R3,R4){
+            let ADD=R3+R4;
+            return ADD;
+        }
+        console.log(Retrun_Add_Practice_2(8,6));
+
+        //-----物件-----
+        //用來封裝其他資料的容器
+        //建立物件 let 資料名稱=new Object(); 
+        //可以透過 . 存取物件的成員
+        let obj=new Object();
+        obj.age=3;
+        obj.member="小綠";
+        obj.hello=function(){
+            //在{物件的方法中}使用this代表物件本身
+            //this的用法  this.age就等於 obj.age 
+            console.log("Hi!我是" ,this.member,"我今年",this.age,"歲")
+            console.log("hello!~")
+        }
+        //使用物件
+        console.log(obj.member);//物件，成員名稱
+        obj.hello();//呼叫函式
+        console.log(obj.age>10);//因為不符合所以印出false
+
+        //-----使用JSON-建立物件----
+        //JSON物件表示法:建立物件的簡單寫法
+        //建立物件和物件成員 使用方法:
+        //{ 成員名稱:資料,成員名稱:資料 }
+        //範例:
+        let JSON={obj_1:100,obj_2:"你好阿"};
+        console.log(JSON.obj_1);
+
+        //應用
+        let obj_JSON={
+            age:5,
+            member:"小迪",
+            hi:function(){  //裡面也可以放函式
+            console.log("Hi!我是" ,this.member,"我今年",this.age,"歲");
+            console.log("hi~!");
+            }
+        };
+        console.log(obj_JSON);
+        obj_JSON.hi();//呼叫物件中的函式
+
+        //-----陣列------
+        //建立空白陣列，可以放進變數中進行後面的操作
+        //new Array() 或 []
+        //範例 let arr=[];
+        //新增資料:使用陣列的push方法
+        //陣列.push(資料)
+        //範例
+        let arr_1=[];
+        arr_1.push(3);//將3 push進陣列 
+        arr_1.push(4);
+
+        //取得資料
+        //陣列[編號]  [0,1,2,3,4,5,6........]
+        let arr_2=[];
+        arr_2.push(3);
+        arr_2.push(4);
+        console.log(arr_2[0]);//陣列第一個從[0]開始，所以要將資料取出的話要從[0]開始
+        console.log(arr_2[1]);//[0]後續為[1]
+        console.log(arr_2[2]);//因為只有放進兩個資料，所以[2]是undefined
+        
+        //取得陣列的長度
+        //陣列長度代表陣列中的資料數量:
+        //利用 length 屬性取得陣列長度: 陣列.length
+        //範例
+        let arr_3=[];
+        console.log(arr_3.length);//因為目前沒有放進任何資料所以長度為0，於是印出來也是0
+        arr_3.push(3);
+        arr_3.push(4);
+        console.log(arr_3.length);//放進了2個資料所以長度變更為2
+        
+        //-----同時建立物件與資料:直接將資料放進[]中，用逗號隔開[資料,資料,資料,....]
+        //範例
+        let arr_4=[32,75,"你好"];
+        arr_4.push(89);
+        console.log(arr_4.length);
+        
+        //迴圈印出陣列中資料練習
+        console.log("------------------------");//我是分隔線
+        let arr_5=["第一","第二","第三"];
+        arr_5.push("第四");
+        arr_5.push("第五");
+        for( let _x=0 ; _x<arr_5.length ; _x++ ){
+            console.log(_x);//印出_x
+            console.log(arr_5[_x]);//印出資料
+        }
+        //-----HTML DOM-----
+        
+    </script>
+</body>
+</html>
