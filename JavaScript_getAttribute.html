@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>getAttribute練習</title>
+    <script src="https://kit.fontawesome.com/081c71dde6.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -16,6 +17,7 @@
     <input type="checkbox" onclick="ShowP()">顯示密碼
     <script>
         function ShowP(){
+            console.log("顯示密碼")
             let x=document.getElementById("Password")
             if(x.type==="password"){
                 x.type="text";
@@ -31,8 +33,42 @@
     <label>使用者名稱</label>
     <input type="text">
     <label>密碼</label>
-    <input type="password">
+    <input type="password" id="iconPassword">
+    <i class="fa-solid fa-eye" id="show_icon" style="margin-left:-25px;"></i>
     <button>登入</button>
+
+    <script>
+        //抓icon id
+        const show_Icon=document.querySelector("#show_icon");
+        //抓密碼 id
+        const Password=document.querySelector("#iconPassword");
+
+        //監聽事件
+        show_Icon.addEventListener('click',function(){
+            //判斷password 還是text
+            const type=Password.getAttribute('type')==='password'?'text':'password';
+            //這裡的 ? : 相當於if else
+            // if type=password  tyep=text ,else  type=password;
+            
+            
+            //設定
+            Password.setAttribute('type',type);
+
+            let x=document.getElementById("show_icon");
+            
+
+            //轉換icon圖片 如果type=password 開眼icon 反之 閉眼icon
+            if(type==='text'){
+                x.className="fa-solid fa-eye-slash";
+                console.log("切換class=開眼icon");
+            }else{
+                x.className="fa-solid fa-eye"
+                console.log("切換class=閉眼icon");
+            }
+            console.log(x.className);
+            
+        });
+    </script>
 
     
 </body>
