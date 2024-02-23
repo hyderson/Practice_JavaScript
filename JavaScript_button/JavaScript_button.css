@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: antiquewhite;
+    transition: 0.5s;
+}
+
+#toggle {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 120px;
+    height: 60px;
+    background-color: black;
+    border-radius: 50px;
+    box-shadow: inset 0px 0px 10px 0px rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+#toggle .button {
+    width: 60px;
+    height: 60px;
+    /*scale可以修改元素大小*/
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset -5px 0px 8px 3px rgb(156, 156, 156);
+    position: absolute;
+    top:0;
+    left:0;
+    border-radius: 50px;
+    transform: scale(0.89);
+    transition: 0.5s;
+}
+
+#toggle.dark .button {
+    position: absolute;
+    left: 60px;
+
+    box-shadow: inset 5px 0px 8px 3px rgb(156, 156, 156);
+    transition: 0.5s;
+}
+
+#toggle.dark {
+    background-color: green;
+    transition: 0.5s;
+}
