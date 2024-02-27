@@ -1,0 +1,62 @@
+/** {
+    margin: 0;
+    padding: 0;
+}
+*/
+h1 {
+    text-align: center;
+}
+.container {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgb(207,207,207);
+    padding: 20px;
+} 
+input{
+    width:100%;
+    padding:10px;
+    border:1px solid brown;
+    margin-top:5px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+button{
+    width:100%;
+    background-color:lightgreen;
+    font-size:30px;
+    margin-top: 20px;
+    border:none;
+}
+#rule{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgb(207,207,207);
+    padding: 20px;
+    margin-top: 20px;
+    display: none;
+}
+#rule h2{
+    text-align: center;
+}
+.invalid{
+    color:red;
+}
+.valid{
+    color:green;
+    
+}
+.invalid:before{
+    position: relative;
+    left:-15;
+    content:'!';
+}
+.valid:before{
+    position: relative;
+    left:-15;
+    content:'\2713';
+}
