@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="text-align: center;">
+    <h2>JS DOM 各種寫法</h2>
+    <h2>範例一:請按下按鈕來顯示訊息</h2>
+
+    <input type="button" value="訊息1" onclick="message_1()">
+    <input type="button" value="訊息2" id="btn2">
+    <input type="button" value="訊息3" id="btn3">
+    <input type="button" value="訊息4" id="btn4">
+    <input type="button" value="訊息5" id="btn5">
+
+    <p id="display"></p>
+    <hr>
+    <h2>選擇你的背景顏色</h2>
+    <select style="padding:5px; border-radius: 15px;"  id="color" onchange="change()">
+        <option  value="white">白色</option>
+        <option  value="yellow">黃色</option>
+        <option  value="green">綠色</option>
+        <option  value="darkcyan">藍色</option>
+    </select>
+    
+
+
+
+    <script>
+        //第一種 function
+        function message_1(){
+            document.getElementById("display").innerHTML="第一種方法";
+        }
+
+        //第二種 抓id addEventListener
+        document.getElementById("btn2").addEventListener("click",function(){
+            document.getElementById("display").innerHTML="第二種方法";
+        })
+
+        //第三種  簡化版function ()=>
+        document.getElementById("btn3").addEventListener("click",() =>{
+            document.getElementById("display").innerHTML="第三種方法";
+        })
+
+        //第四種 
+        document.getElementById("btn4").onclick=()=>{ document.getElementById("display").innerHTML="第四種方法";}
+        
+        //第五種 變數
+        const btn5=document.getElementById("btn5");
+        const show=document.getElementById("display");
+
+        function showfc(){
+            show.innerHTML="第五種方法";
+        }
+        btn5.addEventListener("click",showfc);
+
+
+
+
+        //更改背景顏色
+
+        //方法一 函式分配法 
+        /*function change(){
+            document.body.style.backgroundColor=document.getElementById("color").value;
+        }*/
+
+        //方法二 物件分配法
+        document.getElementById("color").addEventListener('change',()=>{
+            document.body.style.backgroundColor=document.getElementById("color").value;
+        })
+
+    </script>
+
+</body>
+</html>
